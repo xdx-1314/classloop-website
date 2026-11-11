@@ -3,143 +3,171 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#171614">
-  <meta name="description" content="课灵｜ClassLoop 是你的个人学习助手。查看下一节课和近期截止日期，用建议学习安排规划这一周。支持 iPhone 和 iPad。">
-  <title>课灵｜ClassLoop — 个人学习助手</title>
-  <link rel="icon" href="assets/icon.webp" type="image/webp">
-  <link rel="stylesheet" href="home.css">
+  <meta name="description" content="课灵 ClassLoop 是你的个人学习助手。用课表和任务安排每天的学习，用专注计时投入当下，再通过记忆卡与间隔复习巩固所学。支持 iPhone、iPad 和 Mac。">
+  <title>课灵 ClassLoop — 你的个人学习助手</title>
+  <link rel="icon" href="assets/classloop-icon.webp" type="image/webp">
+  <link rel="stylesheet" href="landing.css">
   <script src="home.js" defer></script>
+  <link rel="stylesheet" href="language.css">
+  <script src="language.js" data-page="index.html"></script>
 </head>
 <body>
-  <header class="bar wrap">
-    <a class="brand" href="./"><img src="assets/icon.webp" width="38" height="38" alt="">课灵｜ClassLoop</a>
-    <nav aria-label="主导航"><a href="#features">功能</a><a href="#pro">订阅</a><a href="support/">支持</a><a class="nav-download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">下载</a></nav>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="shell header">
+    <a class="brand" href="index.html"><img src="assets/classloop-icon.webp" width="36" height="36" alt="">课灵｜ClassLoop</a>
+    <nav aria-label="主导航">
+      <a href="#features">功能</a>
+      <a href="#pro">订阅</a>
+      <a href="support/index.html">支持</a>
+      <a class="nav-download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">下载</a>
+
+      <label class="language-switch" hidden><select aria-label="网站语言"><option value="auto">跟随设备</option><option value="zh-CN" lang="zh-CN">简体中文</option><option value="zh-Hant" lang="zh-Hant">繁體中文</option><option value="en" lang="en">English</option></select></label>
+    </nav>
   </header>
-  <main>
-    <section class="hero wrap">
-      <div class="intro">
-        <p class="eyebrow"><span></span> 你的学校助手</p>
-        <h1>你的个人学习助手<span class="period">。</span></h1>
-        <p class="lede">帮你记住上什么课、什么时候交作业，也帮你想好接下来先做什么。</p>
-        <div class="downloads" id="download">
-          <a class="download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
-            <span>在 App Store 下载<small>适用于 iPhone 和 iPad</small></span>
-          </a>
-          <div class="coming"><span>macOS</span><small>即将推出</small></div>
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">你的个人学习助手</p>
+        <h1 id="hero-title">把学过的，<br><em>记得更久。</em></h1>
+        <p class="intro">用 ClassLoop 理清今天的任务，留出专注时间，再用记忆卡和间隔复习，把学过的知识慢慢记牢。</p>
+        <div class="hero-actions" id="download" role="group" aria-label="免费下载 ClassLoop">
+          <a class="button" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">下载 iPhone / iPad 版 <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263?platform=mac">下载 Mac 版 <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <figure class="week">
-        <div class="device-stage">
-          <div class="device-shot">
-            <img src="assets/schedule.webp" width="600" height="1305" alt="ClassLoop 的 iPhone 课表界面">
-          </div>
+      <figure class="hero-visual">
+        <div class="hero-stage">
+          <div class="stage-line" aria-hidden="true"></div>
+          <img class="hero-home" src="assets/review-home.webp" width="650" height="1413" alt="iPhone 上的记忆首页，显示到期卡片和卡组">
+          <img class="hero-card" src="assets/review-card.webp" width="650" height="1413" alt="iPhone 上的记忆卡，翻面后可从四档中选择评分">
         </div>
-        <figcaption>ClassLoop for iPhone · 周课表 · 示例课程</figcaption>
+        <figcaption>ClassLoop for iPhone · 实际界面</figcaption>
       </figure>
     </section>
 
-    <section class="features" id="features" aria-labelledby="features-title">
-      <div class="wrap">
-        <header class="section-heading features-heading">
-          <p class="eyebrow"><span></span> 功能介绍</p>
-          <h2 id="features-title">从上课到复习，<br>每天的安排都清楚。</h2>
-          <p>开学导入课表，课间查下一节课，回到宿舍再看看这周要交什么。</p>
-        </header>
-
-        <div class="feature-layout feature-showcase">
-          <article class="showcase-card schedule-showcase">
-            <div class="showcase-copy">
-              <p class="number">01 / 开学排课</p>
-              <h3>一周的课，摊开来看。</h3>
-              <p>粘贴课程文本、导入 CSV，或用同学发来的课表分享码。导入前可以预览，首次完整课表导入免费。</p>
-              <ul class="feature-tags" aria-label="课表功能">
-                <li>日程 / 周视图 / 月历</li><li>单双周</li><li>教室与上课提醒</li>
-              </ul>
-            </div>
-            <figure class="showcase-shot">
-              <img src="assets/schedule.webp" width="600" height="1305" alt="ClassLoop 周课表显示一周的课程和教室" loading="lazy">
-              <figcaption>周课表 · 示例课程</figcaption>
-            </figure>
-          </article>
-
-          <article class="showcase-card today-showcase">
-            <div class="showcase-copy">
-              <p class="number">02 / 每天查课</p>
-              <h3>下节课，几点到哪儿？</h3>
-              <p>「今日」汇总当前课程、下一节课和当天待办。还可以把课表小组件放在主屏幕上，课间随手看一眼。</p>
-              <ul class="feature-tags" aria-label="今日功能">
-                <li>当前与下一节课</li><li>今日待办</li><li>小组件</li>
-              </ul>
-            </div>
-            <figure class="showcase-shot">
-              <img src="assets/today.webp" width="560" height="1218" alt="ClassLoop 今日界面显示当天状态和本周计划入口" loading="lazy">
-              <figcaption>「今日」界面</figcaption>
-            </figure>
-          </article>
+    <div class="review-content" id="features">
+      <section class="curve-band" id="review" aria-labelledby="review-title">
+        <div class="shell curve-layout">
+          <div>
+            <p class="kicker">艾宾浩斯遗忘曲线</p>
+            <h2 id="review-title">每次回想，<br>都在巩固记忆。</h2>
+            <p>记忆会随着时间变模糊。ClassLoop 用间隔复习帮你反复巩固。想不起来的卡片更早回来，已经记牢的卡片可以隔更久再见。</p>
+          </div>
+          <figure class="curve-card">
+            <div class="chart-head"><span>记忆保持</span><span>遗忘曲线示意</span></div>
+            <canvas id="memory-curve" width="600" height="225" role="img" aria-label="示意图中，记忆随时间下降，每次复习后回升，随后的复习间隔逐渐拉长。"></canvas>
+            <div class="chart-time">时间 <span aria-hidden="true">→</span></div>
+            <figcaption>虚线表示未复习时的变化。实际间隔会随评分调整。</figcaption>
+          </figure>
         </div>
+      </section>
 
-        <div class="study-routine">
-          <article class="routine-card tasks-story">
-            <p class="number">03 / 作业与考试</p>
-            <h3>这周要交什么？</h3>
-            <p>把作业、测验和考试记下来，设置截止日期和提醒。在七天计划里对照课表，提前给忙的那几天腾出时间。</p>
-            <div class="routine-example">
-              <p class="example-label">本周待办 <span>示例</span></p>
-              <ul class="deadline-list">
-                <li><span class="deadline-dot"></span><strong>高数习题</strong><span class="deadline-day">周三</span></li>
-                <li><span class="deadline-dot"></span><strong>数据结构实验报告</strong><span class="deadline-day">周五</span></li>
-                <li><span class="deadline-dot"></span><strong>大学英语测验</strong><span class="deadline-day">周五</span></li>
-              </ul>
-            </div>
-          </article>
-          <article class="routine-card focus-story">
-            <p class="number">04 / 专注与回顾</p>
-            <h3>给一份作业留出时间。</h3>
-            <p>从待办里选一项作业，开启专注计时。结束后回看投入了多久，以及哪些任务已经完成。</p>
-            <div class="routine-example focus-example">
-              <p class="example-label">一次专注 <span>示例</span></p>
-              <div class="focus-session">
-                <div class="focus-ring"><strong>25</strong><span>分钟</span></div>
-                <div><strong>数据结构实验报告</strong><p>把专注时间记到对应作业下</p></div>
-              </div>
-            </div>
-          </article>
+      <section class="shell workflow" aria-labelledby="workflow-title">
+        <div>
+          <p class="kicker">一次复习</p>
+          <h2 id="workflow-title">先从记忆里找答案。</h2>
+          <ol class="steps">
+            <li><div><h3>把材料做成卡</h3><p>手动制卡，或导入 CSV、TSV 文件。</p></div></li>
+            <li><div><h3>到期时主动回想</h3><p>先试着回答，再翻卡核对。每天从到期队列开始。</p></div></li>
+            <li><div><h3>用评分安排下一次</h3><p>回想起来有多费力？用四档自评，让排程跟着掌握程度变化。</p></div></li>
+          </ol>
         </div>
-        <a class="end-download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">在 App Store 下载 <span aria-hidden="true">↗</span></a>
+        <figure class="review-screens">
+          <div class="review-screen-pair">
+            <img src="assets/review-english.webp" width="560" height="1218" alt="复习时先看到题目，可以回想后再显示答案" loading="lazy">
+            <img src="assets/review-card.webp" width="650" height="1413" alt="另一张卡片翻面后的答案和四档评分按钮" loading="lazy">
+          </div>
+          <figcaption>App 内复习界面 · 回想、核对与评分</figcaption>
+        </figure>
+      </section>
+
+      <section class="tools-band" aria-labelledby="tools-title">
+        <div class="shell">
+          <h2 id="tools-title">看清今天，专心学一件事。</h2>
+          <div class="tools-grid">
+            <article>
+              <figure class="feature-media">
+                <img src="assets/schedule.webp" width="600" height="1305" alt="周课表中按时间排列的课程与教室" loading="lazy">
+              </figure>
+              <div class="feature-copy"><h3>课程表</h3><p>导入或手动添加课程，随时看下一节课的时间和教室。</p></div>
+            </article>
+            <article>
+              <figure class="feature-media tasks-media">
+                <img src="assets/feature-tasks.webp" width="560" height="911" alt="作业列表的界面示意，展示任务名称、截止日期和进度" loading="lazy">
+                <figcaption>界面示意</figcaption>
+              </figure>
+              <div class="feature-copy"><h3>作业与考试</h3><p>记下任务和重要日期，在「今日」查看当天安排。</p></div>
+            </article>
+            <article>
+              <figure class="feature-media focus-media">
+                <img src="assets/feature-focus.webp" width="560" height="911" alt="专注计时的界面示意，展示 25 分钟倒计时和专注记录" loading="lazy">
+                <figcaption>界面示意</figcaption>
+              </figure>
+              <div class="feature-copy"><h3>专注计时</h3><p>为一项任务开启番茄钟，回顾完成情况和专注时长。</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="shell plans" id="pro" aria-labelledby="pro-title">
+      <p class="kicker">免费版与 ClassLoop Pro</p>
+      <h2 id="pro-title">日常复习，免费就能做。</h2>
+      <p class="section-intro">免费版包含制卡、到期复习和基础统计。想集中练薄弱内容，或看清每张卡的掌握情况，可以选择 Pro。</p>
+      <table>
+        <caption class="sr-only">免费版与 ClassLoop Pro 功能对照</caption>
+        <thead><tr><th scope="col">功能</th><th scope="col">免费版</th><th scope="col">Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">记忆卡与复习</th><td>建卡组、导入卡片、到期复习与自动排程</td><td>包含免费功能，可按标签筛选或只复习遗忘过的卡</td></tr>
+          <tr><th scope="row">复习统计</th><td>到期数量、近 7 天复习次数</td><td>另可查看各卡组及单张卡的掌握情况</td></tr>
+          <tr><th scope="row">课表与专注</th><td>课表导入、任务、番茄钟与基础报告</td><td>另有学期复用、小组件、高清报告和进阶专注统计</td></tr>
+          <tr><th scope="row">外观</th><td>经典陶土、清澈蓝</td><td>另有紫罗兰、薄荷、日落和墨白主题</td></tr>
+        </tbody>
+      </table>
+      <h3 class="billing-title">Pro 购买方式</h3>
+      <p class="billing-intro">三种方式解锁相同的 Pro 权益。</p>
+      <div class="billing">
+        <article>
+          <h4>月度订阅</h4>
+          <p class="plan-price"><strong>¥8</strong><span>／月</span></p>
+          <p>按月自动续订</p>
+        </article>
+        <article>
+          <h4>年度订阅</h4>
+          <p class="plan-price"><strong>¥68</strong><span>／年</span></p>
+          <p>按年自动续订</p>
+        </article>
+        <article>
+          <h4>终身买断</h4>
+          <p class="plan-price"><strong>¥98</strong><span>／一次性</span></p>
+          <p>一次购买，长期使用 Pro</p>
+        </article>
       </div>
+      <p class="fine-print">以上金额以人民币显示。实际价格与优惠以 App 内购买页面为准。订阅管理和取消方式见<a href="terms/index.html">使用条款</a>。</p>
     </section>
-    <section class="pro wrap" id="pro" aria-labelledby="pro-title">
-      <div class="section-heading">
-        <p class="eyebrow"><span></span> CLASSLOOP PRO</p>
-        <h2 id="pro-title">把课表变成学习计划。</h2>
-        <p class="pro-lead">按截止日期和每天的任务量，自动给出未来七天的学习建议。新学期可以复用课表，学期结束可以导出高清报告。</p>
+
+    <section class="devices-band" id="devices" aria-labelledby="devices-title">
+      <div class="shell devices">
+        <div class="devices-copy">
+          <p class="kicker">iPhone、iPad 与 Mac</p>
+          <h2 id="devices-title">手边有哪台，就用哪台复习。</h2>
+          <p>路上用 iPhone 过几张卡，回到桌前，用 iPad 或 Mac 的大屏整理卡组、查看复习安排。</p>
+          <p class="store-help">也可在设备上的 App Store 搜索「课灵 ClassLoop」。</p>
+        </div>
+        <figure class="device-gallery">
+          <img class="device-mac" src="assets/mac.webp" width="1500" height="938" alt="Mac 上的 ClassLoop 今日界面" loading="lazy">
+          <img class="device-ipad" src="assets/ipad.webp" width="900" height="1200" alt="iPad 上的 ClassLoop 今日界面" loading="lazy">
+          <figcaption>ClassLoop for Mac 与 iPad · 实际界面</figcaption>
+        </figure>
       </div>
-      <div class="pro-plans">
-        <article>
-          <p class="plan-cycle">每月续订</p>
-          <h3>月度订阅</h3>
-          <p>适合想按月使用 Pro 的同学。</p>
-        </article>
-        <article>
-          <p class="plan-cycle">每年续订</p>
-          <h3>年度订阅</h3>
-          <p>适合想在整个学年使用 Pro 的同学。</p>
-        </article>
-        <article>
-          <p class="plan-cycle">一次付费</p>
-          <h3>终身买断</h3>
-          <p>一次购买，长期使用 Pro，无需续订。</p>
-        </article>
-      </div>
-      <p class="pro-note">在 ClassLoop 的「设置 → 账户与 Pro」查看方案。价格和优惠资格以 App 内购买页面为准。订阅会自动续订，管理及取消方式见<a href="terms/">使用条款</a>。</p>
-      <a class="download pro-download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">前往 App Store <span aria-hidden="true">↗</span></a>
     </section>
   </main>
-
-  <footer class="wrap footer">
-    <span>© 2026 课灵｜ClassLoop</span>
-    <nav aria-label="页脚导航"><a href="privacy/">隐私政策</a><a href="terms/">使用条款</a><a href="support/">获取支持</a></nav>
+  <footer class="shell footer">
+    <span>© 2026 课灵 ClassLoop</span>
+    <nav aria-label="页脚导航"><a href="privacy/index.html">隐私政策</a><a href="terms/index.html">使用条款</a><a href="support/index.html">获取支持</a></nav>
   </footer>
 </body>
 </html>

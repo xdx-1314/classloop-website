@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#171614">
+  <meta name="description" content="ClassLoop is your personal learning assistant for iPhone, iPad, and Mac. Plan your day, make time to focus, and remember what you learn with flashcards and spaced review.">
+  <title>ClassLoop — Your personal learning assistant</title>
+  <link rel="icon" href="../assets/classloop-icon.webp" type="image/webp">
+  <link rel="stylesheet" href="../landing.css">
+  <script src="../home.js" defer></script>
+  <link rel="stylesheet" href="../language.css">
+  <script src="../language.js" data-page="index.html"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell header">
+    <a class="brand" href="index.html"><img src="../assets/classloop-icon.webp" width="36" height="36" alt="">ClassLoop</a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#pro">Plans</a>
+      <a href="support/index.html">Support</a>
+      <a class="nav-download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">Download</a>
+
+      <label class="language-switch" hidden><select aria-label="Website language"><option value="auto">Device language</option><option value="zh-CN" lang="zh-CN">简体中文</option><option value="zh-Hant" lang="zh-Hant">繁體中文</option><option value="en" lang="en">English</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">Your personal learning assistant</p>
+        <h1 id="hero-title">Learn it today.<br><em>Remember it longer.</em></h1>
+        <p class="intro">Organize today’s tasks, make time to focus, and retain what you learn with flashcards and spaced review.</p>
+        <div class="hero-actions" id="download" role="group" aria-label="Download ClassLoop for free">
+          <a class="button" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">Download for iPhone / iPad <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263?platform=mac">Download for Mac <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <div class="hero-stage">
+          <div class="stage-line" aria-hidden="true"></div>
+          <img class="hero-home" src="../assets/review-home.webp" width="650" height="1413" alt="The ClassLoop review dashboard on iPhone, showing due cards and decks">
+          <img class="hero-card" src="../assets/review-card.webp" width="650" height="1413" alt="A flashcard on iPhone with four rating options after revealing the answer">
+        </div>
+        <figcaption>ClassLoop for iPhone · App screenshots</figcaption>
+      </figure>
+    </section>
+
+    <div class="review-content" id="features">
+      <section class="curve-band" id="review" aria-labelledby="review-title">
+        <div class="shell curve-layout">
+          <div>
+            <p class="kicker">The Ebbinghaus forgetting curve</p>
+            <h2 id="review-title">Every recall<br>strengthens your memory.</h2>
+            <p>Memories fade over time. ClassLoop helps you strengthen them through spaced review. Cards you struggle to recall return sooner, while familiar cards wait longer.</p>
+          </div>
+          <figure class="curve-card">
+            <div class="chart-head"><span>Memory retention</span><span>Illustrative forgetting curve</span></div>
+            <canvas id="memory-curve" width="600" height="225" role="img" aria-label="Memory fades over time and rises after each review, with progressively longer intervals between reviews."></canvas>
+            <div class="chart-time">Time <span aria-hidden="true">→</span></div>
+            <figcaption>The dashed line shows how memory fades without review. Actual intervals depend on your ratings.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="shell workflow" aria-labelledby="workflow-title">
+        <div>
+          <p class="kicker">A review session</p>
+          <h2 id="workflow-title">Try to recall the answer first.</h2>
+          <ol class="steps">
+            <li><div><h3>Make flashcards</h3><p>Create cards by hand or import CSV or TSV files.</p></div></li>
+            <li><div><h3>Recall when cards are due</h3><p>Try to answer before flipping the card. Start each day with the cards due for review.</p></div></li>
+            <li><div><h3>Rate your recall</h3><p>Choose one of four ratings based on how difficult the card was. ClassLoop adjusts the next review accordingly.</p></div></li>
+          </ol>
+        </div>
+        <figure class="review-screens">
+          <div class="review-screen-pair">
+            <img src="../assets/review-english.webp" width="560" height="1218" alt="A review question with an option to reveal the answer after recalling it" loading="lazy">
+            <img src="../assets/review-card.webp" width="650" height="1413" alt="The answer and four recall ratings on another flashcard" loading="lazy">
+          </div>
+          <figcaption>Review in the app · Recall, check, and rate</figcaption>
+        </figure>
+      </section>
+
+      <section class="tools-band" aria-labelledby="tools-title">
+        <div class="shell">
+          <h2 id="tools-title">See your day. Focus on one thing.</h2>
+          <div class="tools-grid">
+            <article>
+              <figure class="feature-media">
+                <img src="../assets/schedule.webp" width="600" height="1305" alt="A weekly timetable showing classes and rooms in time order" loading="lazy">
+              </figure>
+              <div class="feature-copy"><h3>Class schedule</h3><p>Import classes or add them by hand. Check when and where your next class takes place.</p></div>
+            </article>
+            <article>
+              <figure class="feature-media tasks-media">
+                <img src="../assets/feature-tasks.webp" width="560" height="911" alt="Illustration of a task list with assignment names, deadlines, and progress" loading="lazy">
+                <figcaption>Illustration</figcaption>
+              </figure>
+              <div class="feature-copy"><h3>Assignments and exams</h3><p>Record tasks and important dates, then check the day’s schedule in Today.</p></div>
+            </article>
+            <article>
+              <figure class="feature-media focus-media">
+                <img src="../assets/feature-focus.webp" width="560" height="911" alt="Illustration of a 25-minute focus timer and focus history" loading="lazy">
+                <figcaption>Illustration</figcaption>
+              </figure>
+              <div class="feature-copy"><h3>Focus timer</h3><p>Start a Pomodoro session for a task, then check your progress and time spent.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="shell plans" id="pro" aria-labelledby="pro-title">
+      <p class="kicker">Free and ClassLoop Pro</p>
+      <h2 id="pro-title">Daily review is free.</h2>
+      <p class="section-intro">Create cards, review what’s due, and see basic statistics for free. Use Pro to practice cards you struggle with and see how well you know individual cards.</p>
+      <table>
+        <caption class="sr-only">Compare Free and ClassLoop Pro</caption>
+        <thead><tr><th scope="col">Features</th><th scope="col">Free</th><th scope="col">Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Flashcards and review</th><td>Create decks, import cards, and review due cards with automatic scheduling</td><td>Includes Free, plus review by tag or focus on cards you’ve forgotten</td></tr>
+          <tr><th scope="row">Review statistics</th><td>Due card count and reviews over the past 7 days</td><td>Also see mastery by deck and individual card</td></tr>
+          <tr><th scope="row">Schedule and focus</th><td>Class imports, tasks, Pomodoro timer, and basic reports</td><td>Also includes term reuse, widgets, high-resolution reports, and advanced focus statistics</td></tr>
+          <tr><th scope="row">Appearance</th><td>Classic Clay and Clear Blue</td><td>Also includes Violet, Mint, Sunset, and Ink &amp; Paper</td></tr>
+        </tbody>
+      </table>
+      <h3 class="billing-title">Ways to buy Pro</h3>
+      <p class="billing-intro">All three options unlock the same Pro features.</p>
+      <div class="billing">
+        <article>
+          <h4>Monthly subscription</h4>
+          <p class="plan-price"><strong>¥8</strong><span>/ month</span></p>
+          <p>Renews automatically each month</p>
+        </article>
+        <article>
+          <h4>Annual subscription</h4>
+          <p class="plan-price"><strong>¥68</strong><span>/ year</span></p>
+          <p>Renews automatically each year</p>
+        </article>
+        <article>
+          <h4>Lifetime purchase</h4>
+          <p class="plan-price"><strong>¥98</strong><span>once</span></p>
+          <p>Pay once for ongoing access to Pro</p>
+        </article>
+      </div>
+      <p class="fine-print">Prices shown are in CNY. See the in-app purchase screen for current prices and offers. To manage or cancel your subscription, see the <a href="terms/index.html">Terms of Use</a>.</p>
+    </section>
+
+    <section class="devices-band" id="devices" aria-labelledby="devices-title">
+      <div class="shell devices">
+        <div class="devices-copy">
+          <p class="kicker">iPhone, iPad, and Mac</p>
+          <h2 id="devices-title">Review wherever you are.</h2>
+          <p>Review a few cards on iPhone while you’re out. At your desk, use the larger screen on iPad or Mac to organize decks and check what’s due.</p>
+          <p class="store-help">You can also search for “ClassLoop” in the App Store on your device.</p>
+        </div>
+        <figure class="device-gallery">
+          <img class="device-mac" src="../assets/mac.webp" width="1500" height="938" alt="The ClassLoop Today view on Mac" loading="lazy">
+          <img class="device-ipad" src="../assets/ipad.webp" width="900" height="1200" alt="The ClassLoop Today view on iPad" loading="lazy">
+          <figcaption>ClassLoop for Mac and iPad · App screenshots</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer class="shell footer">
+    <span>© 2026 ClassLoop</span>
+    <nav aria-label="Footer navigation"><a href="privacy/index.html">Privacy Policy</a><a href="terms/index.html">Terms of Use</a><a href="support/index.html">Get Support</a></nav>
+  </footer>
+</body>
+</html>

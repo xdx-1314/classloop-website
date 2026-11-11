@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#171614">
+  <meta name="description" content="課靈 ClassLoop 是你的個人學習助手。用課表和任務安排每天的學習，用專注計時投入當下，再透過記憶卡與間隔複習鞏固所學。支援 iPhone、iPad 和 Mac。">
+  <title>課靈 ClassLoop — 你的個人學習助手</title>
+  <link rel="icon" href="../assets/classloop-icon.webp" type="image/webp">
+  <link rel="stylesheet" href="../landing.css">
+  <script src="../home.js" defer></script>
+  <link rel="stylesheet" href="../language.css">
+  <script src="../language.js" data-page="index.html"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="shell header">
+    <a class="brand" href="index.html"><img src="../assets/classloop-icon.webp" width="36" height="36" alt="">課靈｜ClassLoop</a>
+    <nav aria-label="主導航">
+      <a href="#features">功能</a>
+      <a href="#pro">訂閱</a>
+      <a href="support/index.html">支援</a>
+      <a class="nav-download" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">下載</a>
+
+      <label class="language-switch" hidden><select aria-label="語言選擇"><option value="auto">跟隨裝置</option><option value="zh-CN" lang="zh-CN">简体中文</option><option value="zh-Hant" lang="zh-Hant">繁體中文</option><option value="en" lang="en">English</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">你的個人學習助手</p>
+        <h1 id="hero-title">把學過的，<br><em>記得更久。</em></h1>
+        <p class="intro">用 ClassLoop 理清今天的任務，留出專注時間，再用記憶卡和間隔複習，把學過的知識慢慢記牢。</p>
+        <div class="hero-actions" id="download" role="group" aria-label="免費下載 ClassLoop">
+          <a class="button" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263">下載 iPhone / iPad 版 <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://apps.apple.com/cn/app/classloop-study-planner/id6762817263?platform=mac">下載 Mac 版 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <div class="hero-stage">
+          <div class="stage-line" aria-hidden="true"></div>
+          <img class="hero-home" src="../assets/review-home.webp" width="650" height="1413" alt="iPhone 上的記憶首頁，顯示到期卡片和卡組">
+          <img class="hero-card" src="../assets/review-card.webp" width="650" height="1413" alt="iPhone 上的記憶卡，翻面後可從四檔中選擇評分">
+        </div>
+        <figcaption>ClassLoop for iPhone · 實際界面</figcaption>
+      </figure>
+    </section>
+
+    <div class="review-content" id="features">
+      <section class="curve-band" id="review" aria-labelledby="review-title">
+        <div class="shell curve-layout">
+          <div>
+            <p class="kicker">艾賓浩斯遺忘曲線</p>
+            <h2 id="review-title">每次回想，<br>都在鞏固記憶。</h2>
+            <p>記憶會隨著時間變模糊。ClassLoop 用間隔複習幫你反復鞏固。想不起來的卡片更早回來，已經記牢的卡片可以隔更久再見。</p>
+          </div>
+          <figure class="curve-card">
+            <div class="chart-head"><span>記憶保持</span><span>遺忘曲線示意</span></div>
+            <canvas id="memory-curve" width="600" height="225" role="img" aria-label="示意圖中，記憶隨時間下降，每次複習後回升，隨後的複習間隔逐漸拉長。"></canvas>
+            <div class="chart-time">時間 <span aria-hidden="true">→</span></div>
+            <figcaption>虛線表示未複習時的變化。實際間隔會隨評分調整。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="shell workflow" aria-labelledby="workflow-title">
+        <div>
+          <p class="kicker">一次複習</p>
+          <h2 id="workflow-title">先從記憶里找答案。</h2>
+          <ol class="steps">
+            <li><div><h3>把材料做成卡</h3><p>手動制卡，或導入 CSV、TSV 檔案。</p></div></li>
+            <li><div><h3>到期時主動回想</h3><p>先試著回答，再翻卡核對。每天從到期隊列開始。</p></div></li>
+            <li><div><h3>用評分安排下一次</h3><p>回想起來有多費力？用四檔自評，讓排程跟著掌握程度變化。</p></div></li>
+          </ol>
+        </div>
+        <figure class="review-screens">
+          <div class="review-screen-pair">
+            <img src="../assets/review-english.webp" width="560" height="1218" alt="複習時先看到題目，可以回想後再顯示答案" loading="lazy">
+            <img src="../assets/review-card.webp" width="650" height="1413" alt="另一張卡片翻面後的答案和四檔評分按鈕" loading="lazy">
+          </div>
+          <figcaption>App 內複習界面 · 回想、核對與評分</figcaption>
+        </figure>
+      </section>
+
+      <section class="tools-band" aria-labelledby="tools-title">
+        <div class="shell">
+          <h2 id="tools-title">看清今天，專心學一件事。</h2>
+          <div class="tools-grid">
+            <article>
+              <figure class="feature-media">
+                <img src="../assets/schedule.webp" width="600" height="1305" alt="周課表中按時間排列的課程與教室" loading="lazy">
+              </figure>
+              <div class="feature-copy"><h3>課程表</h3><p>導入或手動添加課程，隨時看下一節課的時間和教室。</p></div>
+            </article>
+            <article>
+              <figure class="feature-media tasks-media">
+                <img src="../assets/feature-tasks.webp" width="560" height="911" alt="作業列表的界面示意，展示任務名稱、截止日期和進度" loading="lazy">
+                <figcaption>界面示意</figcaption>
+              </figure>
+              <div class="feature-copy"><h3>作業與考試</h3><p>記下任務和重要日期，在「今日」查看當天安排。</p></div>
+            </article>
+            <article>
+              <figure class="feature-media focus-media">
+                <img src="../assets/feature-focus.webp" width="560" height="911" alt="專注計時的界面示意，展示 25 分鐘倒計時和專注記錄" loading="lazy">
+                <figcaption>界面示意</figcaption>
+              </figure>
+              <div class="feature-copy"><h3>專注計時</h3><p>為一項任務開啓番茄鐘，回顧完成情況和專注時長。</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="shell plans" id="pro" aria-labelledby="pro-title">
+      <p class="kicker">免費版與 ClassLoop Pro</p>
+      <h2 id="pro-title">日常複習，免費就能做。</h2>
+      <p class="section-intro">免費版包含制卡、到期複習和基礎統計。想集中練薄弱內容，或看清每張卡的掌握情況，可以選擇 Pro。</p>
+      <table>
+        <caption class="sr-only">免費版與 ClassLoop Pro 功能對照</caption>
+        <thead><tr><th scope="col">功能</th><th scope="col">免費版</th><th scope="col">Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">記憶卡與複習</th><td>建卡組、導入卡片、到期複習與自動排程</td><td>包含免費功能，可按標籤篩選或只複習遺忘過的卡</td></tr>
+          <tr><th scope="row">複習統計</th><td>到期數量、近 7 天複習次數</td><td>另可查看各卡組及單張卡的掌握情況</td></tr>
+          <tr><th scope="row">課表與專注</th><td>課表導入、任務、番茄鐘與基礎報告</td><td>另有學期復用、小工具、高解析度報告和進階專注統計</td></tr>
+          <tr><th scope="row">外觀</th><td>經典陶土、清澈藍</td><td>另有紫羅蘭、薄荷、日落和墨白主題</td></tr>
+        </tbody>
+      </table>
+      <h3 class="billing-title">Pro 購買方式</h3>
+      <p class="billing-intro">三種方式解鎖相同的 Pro 權益。</p>
+      <div class="billing">
+        <article>
+          <h4>月度訂閱</h4>
+          <p class="plan-price"><strong>¥8</strong><span>／月</span></p>
+          <p>按月自動續訂</p>
+        </article>
+        <article>
+          <h4>年度訂閱</h4>
+          <p class="plan-price"><strong>¥68</strong><span>／年</span></p>
+          <p>按年自動續訂</p>
+        </article>
+        <article>
+          <h4>終身買斷</h4>
+          <p class="plan-price"><strong>¥98</strong><span>／一次性</span></p>
+          <p>一次購買，長期使用 Pro</p>
+        </article>
+      </div>
+      <p class="fine-print">以上金額以人民幣顯示。實際價格與優惠以 App 內購買頁面為準。訂閱管理和取消方式見<a href="terms/index.html">使用條款</a>。</p>
+    </section>
+
+    <section class="devices-band" id="devices" aria-labelledby="devices-title">
+      <div class="shell devices">
+        <div class="devices-copy">
+          <p class="kicker">iPhone、iPad 與 Mac</p>
+          <h2 id="devices-title">手邊有哪台，就用哪台複習。</h2>
+          <p>路上用 iPhone 過幾張卡，回到桌前，用 iPad 或 Mac 的大屏整理卡組、查看複習安排。</p>
+          <p class="store-help">也可在裝置上的 App Store 搜索「課靈 ClassLoop」。</p>
+        </div>
+        <figure class="device-gallery">
+          <img class="device-mac" src="../assets/mac.webp" width="1500" height="938" alt="Mac 上的 ClassLoop 今日界面" loading="lazy">
+          <img class="device-ipad" src="../assets/ipad.webp" width="900" height="1200" alt="iPad 上的 ClassLoop 今日界面" loading="lazy">
+          <figcaption>ClassLoop for Mac 與 iPad · 實際界面</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer class="shell footer">
+    <span>© 2026 課靈 ClassLoop</span>
+    <nav aria-label="頁腳導航"><a href="privacy/index.html">隱私政策</a><a href="terms/index.html">使用條款</a><a href="support/index.html">獲取支援</a></nav>
+  </footer>
+</body>
+</html>

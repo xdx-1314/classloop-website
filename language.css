@@ -1,0 +1,24 @@
+.language-switch select {
+  max-width: 10rem;
+  padding: 5px 9px;
+  border: 0;
+  color-scheme: dark;
+  color: #f6f2ea;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+}
+.language-switch select:focus { outline: none; }
+.language-switch select:focus-visible {
+  color: #e9c5a6;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+html[lang="en"] h1 { letter-spacing: -.065em; }
+html[lang="en"] .hero h1 em { white-space: normal; }
+html[lang="en"] .hero h1 { font-size: clamp(42px, 5.8vw, 83px); }
+@media (max-width: 650px) {
+  .header, .bar { align-items: flex-start; flex-direction: column; gap: 9px; padding-block: 11px; }
+  .header nav, .bar nav { width: 100%; flex-wrap: wrap; gap: 6px 12px; }
+  .language-switch select { font-size: 12px; }
+}
